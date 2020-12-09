@@ -23,8 +23,6 @@ function salvar(aviso){
  * uma mensagem de erro
  */
 
-
-
 function selecionarTodos(){
   return db.select('*').from('avisos')
     .then(avisos =>{ return avisos })
@@ -33,4 +31,13 @@ function selecionarTodos(){
     })
 }//Fim do selecionar todos
 
-module.exports = {salvar, selecionarTodos}
+/**
+ * Função para excluir um aviso do banco de dados
+ * @param {int} id 
+ */
+
+function excluir(id){
+  return db.del().from('avisos').where('ID_avisos',id)
+}
+
+module.exports = {salvar, selecionarTodos, excluir}
