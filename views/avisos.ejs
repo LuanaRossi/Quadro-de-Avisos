@@ -8,12 +8,12 @@
     <div class="container">
       <br><br>
 
-      <a href="http://">Voltar</a> <br><br>
+      <a href="javascript:history.back()"><span class="material-icons pb-4">keyboard_backspace</span></a>
 
-      <div class="card shadow">
+      <div id="alerts-card" class="card shadow">
         <div class="card-header bg-purple text-white p-4 pl-5">
           <h2 class="float-left">Avisos Cadastrados</h2>
-          <a href="/avisos/novo" class="btn btn-outline-light float-right">Novo Aviso</a>
+          <a href="/avisos/novo" class="btn btn-outline-light float-right"><span class="material-icons">add</span>Novo Aviso</a>
         </div>
         <div class="card-body p-5">
           <table class="table">
@@ -41,11 +41,11 @@
                   <td><%= aviso.titulo %></td>
                   <td><%= moment(aviso.data).format("DD/MM/YYYY") %></td>
                   <td>
-                    <button class="btn btn-secondary" 
+                    <button id="delete-button" class="btn btn-secondary" 
                             data-toggle="modal" 
                             data-target="#excluirModal"
                             onclick="excluir(event,'<%= aviso.ID_avisos %>')">Excluir</button>
-                    <a href="avisos/editar/<%= aviso.ID_avisos %>" class="btn btn-primary">Alterar</a>
+                    <a href="avisos/editar/<%= aviso.ID_avisos %>" id="alter-button" class="btn btn-primary">Alterar</a>
                   </td>
                 </tr>
  
@@ -61,7 +61,7 @@
     <!-- Modal -->
     <div class="modal fade" id="excluirModal" tabindex="-1" aria-labelledby="excluirModalLabel" aria-hidden="true">
       <div class="modal-dialog">
-        <div class="modal-content">
+        <div id="modal" class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="excluirModalLabel">Deseja mesmo excluir este aviso?</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -88,9 +88,9 @@
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+            <button id="button-no" type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
             <form id="form-excluir" method="GET">
-              <button type="submit" class="btn btn-primary">Sim</button>
+              <button id="button-yes" type="submit" class="btn btn-primary">Sim</button>
             </form>
           </div>
         </div>

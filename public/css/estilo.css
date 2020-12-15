@@ -1,9 +1,165 @@
+:root {
+  /*Variávies para as cores*/
+  --color-bg: #222222;
+  --color-bg-lighter: #333333;
+  --color-textbox-bg: #4c4c4c;
+  --color-primary: #8A04CD;
+  --color-secondary-error: #ff9327;
+  --color-secondary-error-dark: #933701;
+  --color-secondary-success: #00FF99;
+  --color-secondary-success-dark: #005e4d;
+}
 
 .bg-purple{
-  background: #673AB7;
+  background: var(--color-primary);
 }
 
 .gradient-purple{
-  background: rgb(81,45,168);
-  background: linear-gradient(20deg, rgba(81,45,168,1) 28%, rgba(124,77,255,1) 71%);
+  background: rgb(84,0,126);
+  background: linear-gradient(90deg, rgba(84,0,126,1) 0%, rgba(138,4,205,1) 51%, rgba(195,89,248,1) 100%);
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family:sans-serif;
+
+}
+
+.logo {
+  width: 250px;
+  margin-bottom: 40px;
+}
+
+.material-icons {
+  vertical-align: middle;
+}
+
+ #initial-card {
+   border: none;
+   background-color: var(--color-bg-lighter);
+   color: white;
+ }
+ .lead {
+   opacity: 70%;
+ }
+
+ #image{
+   border: 3px solid;
+   border-color: white;
+   width: 90px;
+   margin-top: -20px;
+   margin-left: -20px;
+ }
+
+hr {
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, transparent, rgb(78, 78, 78), transparent);  
+}
+
+a {
+  color: var(--color-secondary-success);
+}
+
+a:hover {
+  color: var(--color-secondary-success-dark);
+  text-decoration: none;
+}
+
+#alerts-card{
+  border: none;
+  background-color: var(--color-bg-lighter);
+}
+
+.table {
+  color: white;
+}
+
+#delete-button {
+  border: none;
+  background-color: var(--color-secondary-error);
+  color: var(--color-secondary-error-dark);
+}
+
+#alter-button {
+  border: none;
+  background-color:var(--color-secondary-success);
+  color: var(--color-secondary-success-dark);
+}
+
+#modal {
+  background-color: var(--color-bg-lighter);
+  color: white;
+}
+
+#button-no {
+  border: none;
+  background-color: var(--color-secondary-error);
+  color: var(--color-secondary-error-dark);
+}
+
+#button-yes {
+  border: none;
+  background-color:var(--color-secondary-success);
+  color: var(--color-secondary-success-dark);
+}
+
+#form-card {
+  border: none;
+  background-color: var(--color-bg-lighter);
+  color: white;
+}
+
+#id {
+  border: none;
+  background-color: rgb(111, 111, 111) ;
+  color: white;
+}
+
+#titulo {
+  border: none;
+  background-color: var(--color-textbox-bg);
+  color: white;
+}
+
+#data {
+  border: none;
+  background-color: var(--color-textbox-bg);
+  color: white;
+}
+
+#mensagem {
+  border: none;
+  background-color: var(--color-textbox-bg);
+  color: white;
+  }
+
+#limpar {
+  border: none;
+  background-color: var(--color-secondary-error);
+  color: var(--color-secondary-error-dark);
+  margin-top: -30px;
+  margin-bottom: -50px;
+}
+
+#salvar {
+  border: none;
+  background-color:var(--color-secondary-success);
+  color: var(--color-secondary-success-dark);
+  margin-top: -30px;
+  margin-bottom: -50px;
+}
+
+.alert-success {
+  background-color: var(--color-secondary-success);
+  border: 1px solid;
+  border-color: var(--color-secondary-success-dark);
+  color:var(--color-secondary-success-dark);
+}
+
+.alert-danger {
+  background-color: var(--color-secondary-error);
+  border: 1px solid;
+  border-color: var(--color-secondary-error-dark);
+  color:var(--color-secondary-error-dark);
 }

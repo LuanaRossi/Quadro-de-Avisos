@@ -3,12 +3,19 @@
 
   <body>
     <!--Menu-->
-    <%- include('./partials/navbar') %>      
+    <%- include('./partials/navbar') %>     
+    <br><br> 
 
-    <div class="container">
+    <center>
+    <div>
+      <img src="img/Remember.png" alt="Remember!"  class="logo">
+    </div>
+  </center>
+
+    <div class="container ">
 
       <% avisos.forEach(aviso => { %>
-        <div class="card shadow mt-4">
+        <div id="initial-card" class="card shadow mt-4">
           <div class="card-header bg-purple text-white p-4 pl-5 d-flex align-items-center justify-content-between">
             <h2> <%= aviso.titulo %>  </h2>
             <h3 class="lead"> <%= moment(aviso.data).format("DD/MM/YYYY") %>  </h3>
@@ -17,15 +24,15 @@
           <div class="card-body p-5">
             <!--Informações do perfil-->
             <div class="d-flex align-items-center">
-              <img src="img/Hange.png" class="img-thumbnail rounded-circle" width="75">
+              <img id="image" src="img/Hange.png" class="rounded-circle">
               <div class="ml-2">
                 <div class="font-weight-bold">Hange</div>
                 <div class="text-secondary"> <%= moment(aviso.data, "YYYYMMDD").fromNow(); %>  </div>
               </div>
             </div>
-  
+            <hr>
             <!--Descrição do aviso-->
-            <div class="mt-4">
+            <div id="message" class="mt-4">
               <%= aviso.mensagem %> 
             </div>
   
